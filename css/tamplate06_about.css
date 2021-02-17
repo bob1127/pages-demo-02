@@ -1,0 +1,595 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    animation: fade 1s linear;
+    
+}
+.loading_section{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: -100%;
+    top: 0;
+    z-index: 9999999;
+    background-color: rgb(214, 208, 200);
+    animation: loading_page 1.5s;
+}
+@keyframes loading_page{
+    0%{
+        left: 0%;
+      
+    }
+    100%{
+ 
+        left: -100%
+    }
+}
+nav ul li:hover #toggle01{
+    top: 5vmin;
+    opacity: 1;
+    visibility: visible;
+}
+nav ul li:hover{
+    cursor: pointer;
+}
+@keyframes fade{
+    0%{
+        background-color: #000;
+        opacity: 0;
+    }
+    100%{
+        background-color: transparent;
+        opacity: 1;
+    }
+}
+section.section_header .LOGO{
+   width: 10vmin;
+   height: 10vmin;
+   background-color: #333;
+   color: white;
+   position: relative;
+}
+section.section_header .col-md-6 .txt{
+    margin-top: 7vmin;
+}
+section.section_header .col-md-6 .txt h1{
+    font-size: 13vmin;
+    letter-spacing: 2vmin;
+    opacity: 1;
+    animation: fadeleft 2.5s;
+}
+@keyframes fadeleft{
+    0%{
+         margin-left: -5vmin;
+         opacity: 0;
+    }
+    100%{
+          margin-left: 0vmin;
+          opacity:1;
+    }
+}
+section.section_header .col-md-6 .txt h3{
+    font-size: 3.2vmin;
+    font-family: Bebas Neue, cursive;
+    font-weight: 900;
+    letter-spacing: 1.5vmin;
+    animation: fadeleft01 2s;
+
+    animation-delay: .4s;
+    opacity: 1;
+
+}
+@keyframes fadeleft01{
+    0%{
+         margin-top: -8vmin;
+         opacity: 0;
+    }
+    100%{
+          margin-top: 0vmin;
+          opacity:1;
+    }
+}
+section.section_header .col-md-6 .txt p{
+    font-size: 2.5vmin;
+}
+section.section_header .col-md-6 .txt .btn{
+    border: 1px solid rgb(41, 40, 40);
+    padding: .2vmin 3vmin;
+}
+section.section_header .col-md-6 .pic_wrap{
+    position: relative;
+    width: 100%;
+}
+section.section_header .col-md-6 .pic_wrap .pic01,
+section.section_header .col-md-6 .pic_wrap .pic02,
+section.section_header .col-md-6 .pic_wrap .bgc
+{
+    position: absolute;
+    background-position: center center;
+    background-size: cover;
+    
+}
+
+section.section_header .col-md-6 .pic_wrap .pic01{
+    width: 80vmin;
+    height: 50vmin;
+    z-index: 1;
+    opacity: 1;
+    animation: move_pic01 3s ;
+    animation-delay: .2s;
+}
+
+section.section_header .col-md-6 .pic_wrap .bgc{
+    background-color: rgb(83, 87, 83);
+    width: 110%;
+    height: 50vmin;
+    left: 3vmin;
+    top: 12vmin
+}
+@keyframes move_pic01{
+    0%{
+       left: -5vmin;
+       opacity: 0;
+    }
+    100%{
+       left: 0;
+       opacity: 1;
+    }
+}
+@media screen and (max-width: 1100px){
+    section.section_header .col-md-6 .pic_wrap .pic01{
+        width: 100%;
+     }
+    section.section_header .col-md-6 .pic_wrap .pic02{
+       left: 15%;
+       width: 70%;
+       top: 10vmin
+    }
+    section.section_header .col-md-6 .pic_wrap .bgc{
+        background-color: rgb(83, 87, 83);
+        width: 100%;
+        height: 70vmin;
+        left: 9vmin;
+        top: 12vmin
+    }
+}
+section.section_header .col-md-6 .pic_wrap .bgc::after{
+    content:'GO DOWN';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 4vmin;
+    color: white;
+    letter-spacing: .5vmin;
+    
+}
+section.section_header .col-md-6 .pic_wrap .bgc::before{
+   content: '↓';
+   font-size: 5vmin;
+   display: block;
+   position: absolute;
+   font-weight: 700;
+   bottom: -3vmin;
+   color: rgb(216, 63, 63);
+   left: 17vmin;
+   opacity: 1;
+   animation: arrow_down 1.2s infinite linear;
+   
+}
+@keyframes arrow_down{
+    0%{
+       bottom: 3vmin;
+       opacity: 0;
+    }
+    100%{
+        bottom: -3vmin;
+        opacity: 1;
+    }
+}
+section.section_header .col-md-6 .pic_wrap .pic02{
+    width: 40vmin;
+    height: 50vmin;
+    z-index: 11;
+    right: 5%;
+    top: 25vmin;
+    opacity: 1;
+    animation: move 2s ;
+}
+@keyframes move{
+    0%{
+       top: 20vmin;
+       opacity: 0;
+    }
+    100%{
+       top: 25vmin;
+       opacity: 1;
+    }
+}
+section.section_header .LOGO::after{
+    content: 'COMPANY';
+    display: block;
+    color: black;
+    font-size: 3vmin;
+    position: absolute;
+    left: 14vmin
+}
+section.section_header .col-md-12 .icon_wrap{
+   width: 100%;
+   height: 150vh ;
+    position: relative;
+   border: 1px solid #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-wrap: wrap;
+   margin-top: 30vh;
+}
+#icon_wrap_section{
+    height: 100vh;
+}
+@media screen and (max-width: 1100px){
+    #icon_wrap_section{
+        height: auto;
+        border: 1px solid #000;
+    }
+    section.section_header .col-md-12 .icon_wrap{
+        height: auto;
+        margin-top: 60vh;
+        border: 1px solid #000;
+    }
+    section.section_header .col-md-12 .icon_wrap img{
+       position: relative;
+    }
+}
+@media screen and (max-width: 450px){
+    section.section_header .col-md-12 .icon_wrap img{
+        position: relative;
+        width: 100%;
+        top: 30%
+     }
+    section.section_header .col-md-12 .icon_wrap{
+        margin-top:  10vmin;
+    }
+}
+section.section_header .col-md-12 .icon_wrap .icon{
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 50vmin;
+    border: 1px solid rgb(185, 185, 185);
+    margin: 3vmin;
+    transition: .4s
+}
+section.section_header .col-md-12 .icon_wrap .icon:hover{
+  margin-left: 3vmin;
+    
+}
+section.section_header .col-md-12 .icon_wrap .icon .pic{
+    background-position: center center;
+    background-size: cover;
+    width: 90%;
+    height: 35vmin;
+    transition: .4s
+}
+section.section_header .col-md-12 .icon_wrap .icon:hover .pic{
+    transform:  scale(1.05);
+}
+section.section_header .col-md-12 .background_img{
+    position: absolute;
+    right: 10%;
+    top: 40%;
+
+
+}
+section.section_header .col-md-12 .background_img img{
+    width: 90vmin;
+
+
+}
+section.section_header .col-md-12 .background_img h1{
+    font-weight: 900;
+    font-size: 11vmin;
+    color: rgb(36, 37, 43);
+    position: absolute;
+    top: 0vmin;
+    z-index: -1;
+   
+    left: -20%;
+    letter-spacing:  1.2vmin;
+}
+section.section_header .col-md-12 .background_img P{
+    position: absolute;
+    top: 12vmin;
+    z-index: -1;
+    font-size: 3vmin;
+   
+    left: -20%;
+}
+section.section_header .col-md-12 .background_img .btn{
+    position: absolute;
+    top: 18vmin;
+   
+  
+   
+    left: -20%;
+}
+
+@media screen and (max-width: 450px){
+    section.section_header .col-md-12 .background_img img{
+        width: 110vmin;
+        opacity: 0.4;
+    
+    
+    }
+    section.section_header .col-md-12 .background_img{
+        position: absolute;
+        right: -20%;
+        top: 70%;
+        opacity: .5;
+    
+    
+
+    }
+    section.section_header .col-md-12 .background_img h1{
+      
+        top: -55vmin;
+        font-weight: 900;
+        font-size: 4.5vmin;
+        left: -0%;
+  
+    }
+    section.section_header .col-md-12 .background_img P{
+      
+        top: -50vmin;
+        
+        left: -0%;
+    }
+    section.section_header .col-md-12 .background_img .btn{
+     
+        top: 12vmin;
+       
+      
+       
+        left: -20%;
+    }
+    section.section_header .col-md-12 .icon_wrap .icon{
+        width: 90%;
+        height: 90vmin;
+   
+
+    }
+   
+    section.section_header .col-md-12 .icon_wrap .icon .pic{
+      
+        width: 50%;
+        height: 35vmin;
+    }
+}
+.section_content #carouselExampleIndicators{
+   
+    width: 500px;
+}
+.phone_btn{
+    border: rgb(56, 55, 55) 1.8px solid;
+    padding: 1vmin 5vmin;
+    width: 40%;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 4vmin
+
+    
+}
+.section_content #carousel_img01{
+    opacity: 1;
+    animation: img01 1.5s ;
+   
+    transition: 1.5s
+}
+.section_content #carousel_img02{
+    opacity: 1;
+    animation: img01 2s ;
+   
+    transition: 1.5s
+}
+@keyframes img01{
+    0%{
+         opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.section_banner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50vh;
+    border: 1px solid #000;
+}
+@media screen and (max-width: 450px){
+    .section_banner{
+        margin-top: 10vh;
+    }
+}
+.section_banner #carouselExampleIndicators{
+    border: 1px solid #000;
+}
+.section_banner #carouselExampleIndicators .btn{
+    color: white;
+    padding: 0.5vmin 2vmin;
+    background: linear-gradient(45deg, #726193 20%, #e37b7c 60%, #ffe4b4);
+}
+.section_banner #carouselExampleIndicators .txt{
+    margin-top: 0;
+    opacity: 1;
+    animation: txt01 2s;
+    top: -5vmin
+}
+.section_banner #carouselExampleIndicators .carousel-item{
+    width: 100%;
+    height: 50vh;
+}
+
+.section_banner #carouselExampleIndicators img{
+    position: absolute;
+    top: 0
+}
+.section_banner #carouselExampleIndicators .txt h1{
+   bottom: 20vmin;
+   font-weight: 500
+}
+.section_banner #carouselExampleIndicators .txt p{
+    bottom: 10vmin
+}
+.section_banner #carouselExampleIndicators .wrap{
+    width: 100%;
+    height: 80vh;
+  
+ 
+}
+.section_banner .li_wrap_title{
+    margin: 3vmin 0;
+}
+.section_banner .li_wrap_title i{
+    position: relative;
+}
+.section_banner .li_wrap_title i:hover{
+    cursor: pointer;
+}
+.section_banner .li_wrap_title i::after{
+    content: 'Ansower';
+    display: block;
+    color: rgb(46, 46, 46);
+    position: absolute;
+    font-size: 2vmin;
+    letter-spacing: .3vmin;
+    width: 25vmin;
+    top: 0vmin;
+    left: 4vmin
+
+}
+.section_banner .li_wrap_content{
+    margin: 1vmin 0;
+    background-color: rgb(43, 43, 43);
+    display: none;
+    padding: 2vmin 4vmin;
+}
+.section_banner .li_wrap_content p{
+    color: white
+}
+.section_banner .down_wrap{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+.section_banner .down_wrap .product_item{
+    position: relative;
+    
+}
+.section_banner .down_wrap .product_item::after{
+    content:'';
+    display: block;
+    width: 1vmin;
+    position: absolute;
+    top: 1vmin;
+    left: -2vmin;
+    height: 1vmin;
+    border-radius: 100%;
+    background-color: #000;
+    transform: rotate(90deg)
+}
+.section_banner .down_wrap img{
+    width: 30%;
+     position: absolute;
+      right: 10%;
+       top: 0
+}
+.section_banner .down_wrap ul{
+    width: 50%;
+}
+@media screen and (max-width: 450px){
+    
+    
+}
+@media screen and (max-width: 1100px){
+    .section_banner .down_wrap img{
+        display: none;
+     }
+     .section_banner .down_wrap ul{
+        width: 100%;
+    }
+}
+.section_banner .pic_wrap .pic{
+    background-position: center center;
+    background-size: cover;
+    width: 20vmin;
+    height: 20vmin;
+}
+.section_banner .contact_icon_wrap{
+    display: flex;
+    padding-bottom: 3vmin;
+    justify-content: flex-start;
+    padding-left: 5vmin;
+    align-items: center;
+}
+.section_banner .contact_icon_wrap .icon{
+   width: 7vmin;
+   margin: 0 3vmin;
+   color: white;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 1vmin;
+   height: 7vmin;
+
+   border-radius: 100%;
+   background-color: #333;
+}
+.section_banner .contact_icon_wrap .icon:hover{
+    cursor: pointer;
+}
+.carousel-fade  .item{  
+    opacity:1;  
+    -webkit-transition-property:opacity ;  
+    -moz-transition-property:opacity ;  
+    -ms-transition-property:opacity ;  
+    -o-transition-property:opacity ;  
+    transition-property:opacity ;
+}
+.carousel-fade  .active{  
+    opacity: 1;
+}
+.carousel-fade  .active.left,.carousel-fade  .active.right{  
+    left: 0;  
+    opacity: 1;
+}
+.carousel-fade  .next.left,.carousel-fade  .prev.right {
+    opacity: 1;
+}
+#middle{
+    margin-top: 40vh;
+}
+#middle_banner{
+    margin-top: 30vh;
+}
+@media screen and (max-width: 1024px){
+    #middle_banner{
+        margin-top: 0vh;
+    }
+}
+@media screen and (max-width: 450px){
+    #middle_banner{
+        margin-top: 60vh;
+    }
+}
